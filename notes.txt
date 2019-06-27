@@ -1,0 +1,3 @@
+when storing a data type for example int, how do you know that the value lies
+in a particular range because the memory allocated needs to be considered.
+online ads
