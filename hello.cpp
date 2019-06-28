@@ -316,55 +316,122 @@
 //    return 0;
 // }
 
+// #include <iostream>
+
+// using namespace std;
+
+// // Base class
+// class Shape {
+//    public:
+//       void setWidth(int w) {
+//          width = w;
+//       }
+//       void setHeight(int h) {
+//          height = h;
+//       }
+
+//    protected:
+//       int width;
+//       int height;
+// };
+
+// // Base class PaintCost
+// class PaintCost {
+//    public:
+//       int getCost(int area) {
+//          return area * 70;
+//       }
+// };
+
+// // Derived class 
+// class Rectangle: public Shape, public PaintCost {
+//    public: 
+//       int getArea() {
+//          return (width * height);
+//       }
+// };
+
+// int main(void) {
+//    Rectangle Rect;
+//    int area;
+
+//    Rect.setWidth(5);
+//    Rect.setHeight(7);
+
+//    area = Rect.getArea();
+
+//    // Print the area of the object.
+//    cout << "Total area: " << Rect.getArea() << endl;
+
+//    // Print the total cost of painting
+//    cout << "Total paint cost: $" << Rect.getCost(area) << endl;
+
+//    return 0;
+// }
+
+
+// #include <iostream>
+
+// using namespace std;
+
+// void counter()
+// {
+//     static int count=0;
+//     cout << count++ << endl;
+// }
+
+// int main()
+// {
+//     for (int i = 0; i < 5; i++)
+//     {
+//         counter();
+//     }
+// }
+
+// #include <iostream>
+
+// using namespace std;
+
+// class Abc
+// {
+//     int i;
+//     public:
+//     Abc()
+//     {
+//         i = 0;
+//         cout << "constructor" << endl;
+//     }
+//     ~Abc()
+//     {
+//         cout << "destructor" << endl;
+//     }
+// };
+
+// void f()
+// {
+//     static Abc obj;
+// }
+
+// int main()
+// {
+//     int x = 0;
+//     if(x == 0)
+//     {
+//         f();
+//     }
+// }
+
+// initialization
+// std::vector<datatype> array_name;
+
 #include <iostream>
+#include <vector>
 
-using namespace std;
+int main()
+{
+    std::vector<int> marks = {50, 45, 47, 65, 80};
+    // marks = {23, 45, 67};
 
-// Base class
-class Shape {
-   public:
-      void setWidth(int w) {
-         width = w;
-      }
-      void setHeight(int h) {
-         height = h;
-      }
-
-   protected:
-      int width;
-      int height;
-};
-
-// Base class PaintCost
-class PaintCost {
-   public:
-      int getCost(int area) {
-         return area * 70;
-      }
-};
-
-// Derived class 
-class Rectangle: public Shape, public PaintCost {
-   public: 
-      int getArea() {
-         return (width * height);
-      }
-};
-
-int main(void) {
-   Rectangle Rect;
-   int area;
-
-   Rect.setWidth(5);
-   Rect.setHeight(7);
-
-   area = Rect.getArea();
-
-   // Print the area of the object.
-   cout << "Total area: " << Rect.getArea() << endl;
-
-   // Print the total cost of painting
-   cout << "Total paint cost: $" << Rect.getCost(area) << endl;
-
-   return 0;
+    std::cout << "length of array : " << marks.size() << std::endl;
+    return 0;
 }
