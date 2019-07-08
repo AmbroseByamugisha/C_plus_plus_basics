@@ -57,6 +57,7 @@ int main(void) {
     // cout << "The balance after withdraw: " << banking.withdraw(400) << endl;
 
     // output the form in terminal
+    while (true) {
     cout << "Choose course of action: " << endl;
     cout << "A: Deposit" << endl;
     cout << "B: Withdraw" << endl;
@@ -73,6 +74,13 @@ int main(void) {
         cin >> withdraw_amt;
         cout << "The balance after withdrwa is: " << banking.withdraw(withdraw_amt) << endl;
     }
+    if (choice == "C") {
+        cout << "Your Account balance is: " << banking.check_balance() << endl;
+    }
+    if (choice != "A" || "B" || "c") {
+        cout << "Please Select either option A, B or C" << endl;
+    }
+}
 
     return 0;
 
